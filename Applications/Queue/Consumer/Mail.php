@@ -15,13 +15,15 @@ namespace Consumer;
 
 /**
  * 消费者逻辑
+ * Consumer logic
  * @author walkor<walkor@workerman.net>
  */
 class Mail
 {
     /**
      * 模拟慢任务
-     * 数据包格式： {"class":"Mail", "method":"send", "args":["xiaoming","xiaowang","hello"]}
+     * Simulated slow task
+     * 数据包格式 Packet format： {"class":"Mail", "method":"send", "args":["xiaoming","xiaowang","hello"]}
      * @param string $from
      * @param string $to
      * @param string $content
@@ -30,6 +32,7 @@ class Mail
     public function send($from, $to, $content)
     {
         // 作为例子，代码省略
+        //As an example, the code is omitted
         sleep(5);
         echo "from:$from to:$to content:$content     mail send success\n";
     }
